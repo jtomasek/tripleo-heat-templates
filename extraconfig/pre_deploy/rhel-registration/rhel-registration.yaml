@@ -68,7 +68,7 @@ resources:
         - name: REG_USER
         - name: REG_TYPE
         - name: REG_METHOD
-      config: {get_file: scripts/rhel-registration}
+      config: {get_file: extraconfig/pre_deploy/rhel-registration/scripts/rhel-registration}
 
   RHELRegistrationDeployment:
     type: OS::Heat::SoftwareDeployment
@@ -99,7 +99,7 @@ resources:
     type: OS::Heat::SoftwareConfig
     properties:
       group: script
-      config: {get_file: scripts/rhel-unregistration}
+      config: {get_file: extraconfig/pre_deploy/rhel-registration/scripts/rhel-unregistration}
       inputs:
         - name: REG_METHOD
 

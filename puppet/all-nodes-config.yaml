@@ -90,7 +90,7 @@ resources:
         hiera:
           datafiles:
             RedHat:
-              raw_data: {get_file: hieradata/RedHat.yaml}
+              raw_data: {get_file: puppet/hieradata/RedHat.yaml}
             all_nodes:
               mapped_data:
                 controller_node_ips:

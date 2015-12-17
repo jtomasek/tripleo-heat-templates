@@ -412,11 +412,11 @@ resources:
             extraconfig:
               mapped_data: {get_param: ExtraConfig}
             common:
-              raw_data: {get_file: hieradata/common.yaml}
+              raw_data: {get_file: puppet/hieradata/common.yaml}
             ceph:
-              raw_data: {get_file: hieradata/ceph.yaml}
+              raw_data: {get_file: puppet/hieradata/ceph.yaml}
             compute:
-              raw_data: {get_file: hieradata/compute.yaml}
+              raw_data: {get_file: puppet/hieradata/compute.yaml}
               mapped_data:
                 cinder_enable_nfs_backend: {get_input: cinder_enable_nfs_backend}
                 nova::debug: {get_input: debug}

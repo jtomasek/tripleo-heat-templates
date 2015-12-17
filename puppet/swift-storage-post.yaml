@@ -24,7 +24,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: manifests/overcloud_object.pp
+        get_file: puppet/manifests/overcloud_object.pp
 
   StorageDeployment_Step1:
     type: OS::Heat::StructuredDeployments
@@ -43,7 +43,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: manifests/ringbuilder.pp
+        get_file: puppet/manifests/ringbuilder.pp
 
   StorageRingbuilderDeployment_Step2:
     type: OS::Heat::StructuredDeployments

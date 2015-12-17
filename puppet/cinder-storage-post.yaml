@@ -23,7 +23,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: manifests/overcloud_volume.pp
+        get_file: puppet/manifests/overcloud_volume.pp
 
   VolumeDeployment_Step1:
     type: OS::Heat::StructuredDeployments

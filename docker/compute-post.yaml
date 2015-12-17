@@ -44,7 +44,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: ../puppet/manifests/overcloud_compute.pp
+        get_file: puppet/manifests/overcloud_compute.pp
 
   ComputePuppetDeployment:
     type: OS::Heat::SoftwareDeployments
@@ -61,7 +61,7 @@ resources:
       group: script
       outputs:
       - name: result
-      config: {get_file: ./copy-etc.sh}
+      config: {get_file: docker/copy-etc.sh}
 
   CopyEtcDeployment:
     type: OS::Heat::SoftwareDeployments
@@ -76,7 +76,7 @@ resources:
       group: script
       outputs:
       - name: result
-      config: {get_file: ./generate_json_config.sh}
+      config: {get_file: docker/generate_json_config.sh}
 
   CopyJsonDeployment:
     type: OS::Heat::SoftwareDeployments

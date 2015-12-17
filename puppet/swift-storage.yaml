@@ -191,13 +191,13 @@ resources:
             - common
           datafiles:
             common:
-              raw_data: {get_file: hieradata/common.yaml}
+              raw_data: {get_file: puppet/hieradata/common.yaml}
             object_extraconfig:
               mapped_data: {get_param: ObjectStorageExtraConfig}
             extraconfig:
               mapped_data: {get_param: ExtraConfig}
             object:
-              raw_data: {get_file: hieradata/object.yaml}
+              raw_data: {get_file: puppet/hieradata/object.yaml}
               mapped_data: # data supplied directly to this deployment configuration, etc
                 swift::swift_hash_suffix: { get_input: swift_hash_suffix }
                 tripleo::ringbuilder::part_power: { get_input: swift_part_power }

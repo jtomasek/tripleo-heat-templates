@@ -19,7 +19,7 @@ resources:
       inputs:
         - name: ping_test_ips
           default: {get_param: PingTestIps}
-      config: {get_file: ./validation-scripts/all-nodes.sh}
+      config: {get_file: validation-scripts/all-nodes.sh}
 
 outputs:
   OS::stack_id:

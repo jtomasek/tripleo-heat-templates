@@ -65,7 +65,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: manifests/ringbuilder.pp
+        get_file: puppet/manifests/ringbuilder.pp
 
   ControllerRingbuilderDeployment_Step3:
     type: OS::Heat::StructuredDeployments

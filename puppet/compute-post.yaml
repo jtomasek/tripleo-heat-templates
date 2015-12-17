@@ -26,7 +26,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: manifests/overcloud_compute.pp
+        get_file: puppet/manifests/overcloud_compute.pp
 
   ComputePuppetDeployment:
     type: OS::Heat::StructuredDeployments

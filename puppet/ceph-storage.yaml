@@ -180,13 +180,13 @@ resources:
             - common
           datafiles:
             common:
-              raw_data: {get_file: hieradata/common.yaml}
+              raw_data: {get_file: puppet/hieradata/common.yaml}
             ceph_extraconfig:
               mapped_data: {get_param: CephStorageExtraConfig}
             extraconfig:
               mapped_data: {get_param: ExtraConfig}
             ceph:
-              raw_data: {get_file: hieradata/ceph.yaml}
+              raw_data: {get_file: puppet/hieradata/ceph.yaml}
               mapped_data:
                 ntp::servers: {get_input: ntp_servers}
                 tripleo::packages::enable_install: {get_input: enable_package_install}

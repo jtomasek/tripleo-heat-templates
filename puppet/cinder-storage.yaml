@@ -250,13 +250,13 @@ resources:
             - common
           datafiles:
             common:
-              raw_data: {get_file: hieradata/common.yaml}
+              raw_data: {get_file: puppet/hieradata/common.yaml}
             volume_extraconfig:
               mapped_data: {get_param: BlockStorageExtraConfig}
             extraconfig:
               mapped_data: {get_param: ExtraConfig}
             volume:
-              raw_data: {get_file: hieradata/volume.yaml}
+              raw_data: {get_file: puppet/hieradata/volume.yaml}
               mapped_data:
                 # Cinder
                 cinder::debug: {get_input: debug}

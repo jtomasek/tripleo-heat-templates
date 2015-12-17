@@ -22,7 +22,7 @@ resources:
       outputs:
       - name: result
       config:
-        get_file: manifests/overcloud_controller.pp
+        get_file: puppet/manifests/overcloud_controller.pp
 
 outputs:
   OS::stack_id:

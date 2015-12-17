@@ -29,7 +29,7 @@ resources:
             $agent_image: {get_param: DockerAgentImage}
             $docker_registry: {get_param: DockerNamespace}
             $docker_namespace_is_registry: {get_param: DockerNamespaceIsRegistry}
-          template: {get_file: ./start_docker_agents.sh}
+          template: {get_file: docker/firstboot/start_docker_agents.sh}
 
 outputs:
   OS::stack_id:
