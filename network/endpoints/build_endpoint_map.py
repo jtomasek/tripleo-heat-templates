@@ -87,7 +87,12 @@ def make_parameter(ptype, default, description=None):
 def template_parameters(config):
     params = collections.OrderedDict()
     params[PARAM_NETIPMAP] = make_parameter('json', {}, 'The Net IP map')
-    params[PARAM_SERVICENETMAP] = make_parameter('json', {}, 'The Service Net map')
+    params[PARAM_SERVICENETMAP] = make_parameter('json',
+                                                 {},
+                                                 'Mapping of service_name -> network name.  '
+                                                 'Typically set via parameter_defaults in the '
+                                                 'resource registry.  This mapping overrides '
+                                                 'those in ServiceNetMapDefaults.')
     params[PARAM_ENDPOINTMAP] = make_parameter('json',
                                                endpoint_map_default(config),
                                                'Mapping of service endpoint '

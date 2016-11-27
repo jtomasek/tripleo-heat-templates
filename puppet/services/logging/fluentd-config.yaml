@@ -14,9 +14,8 @@ parameters:
     type: json
   EndpointMap:
     default: {}
-    description: >
-      Mapping of service endpoint -> protocol. Typically set
-      via parameter_defaults in the resource registry.
+    description: Mapping of service endpoint -> protocol. Typically set
+                 via parameter_defaults in the resource registry.
     type: json
   LoggingDefaultFormat:
     description: >

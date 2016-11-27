@@ -13,9 +13,11 @@ parameters:
     default: {}
     description: The Net IP map
   ServiceNetMap:
-    type: json
     default: {}
-    description: The Service Net map
+    description: Mapping of service_name -> network name. Typically set
+                 via parameter_defaults in the resource registry.  This
+                 mapping overrides those in ServiceNetMapDefaults.
+    type: json
   EndpointMap:
     type: json
     default:
@@ -80,7 +82,7 @@ parameters:
       SwiftInternal: {protocol: http, port: '8080', host: IP_ADDRESS}
       SwiftPublic: {protocol: http, port: '8080', host: IP_ADDRESS}
     description: Mapping of service endpoint -> protocol. Typically set
-      via parameter_defaults in the resource registry.
+                 via parameter_defaults in the resource registry.
   CloudEndpoints:
     type: json
     default: {}
